@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Deploy Firebase Hosting
 
 on:
@@ -29,3 +30,10 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: cdf-puma-2
           channelId: live
+=======
+{
+  "projects": {
+    "default": "cdf-puma-2
+  }
+}
+>>>>>>> de7d9d9 (Atualiza .firebaserc com o ID correto do projeto Firebase)
