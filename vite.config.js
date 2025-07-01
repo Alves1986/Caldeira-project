@@ -4,6 +4,6 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', // importante para funcionar no Firebase Hosting
+  base: '/Alves1986/Caldeira-project/',
 });
 
