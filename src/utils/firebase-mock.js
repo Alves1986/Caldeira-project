@@ -1,3 +1,5 @@
+// No início de cada arquivo .jsx
+import React from 'react';
 // Mock Firebase services for local testing
 export const db = {
   // Mock database object

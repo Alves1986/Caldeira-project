@@ -1,3 +1,5 @@
+// No início de cada arquivo .jsx
+import React from 'react';
 // Mock QR Code scanner for testing without camera
 export class QRCodeScanner {
   constructor(elementId, onSuccess, onError) {

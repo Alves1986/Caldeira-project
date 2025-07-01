@@ -1,4 +1,5 @@
 // Firebase configuration and initialization
+import React from 'react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, doc, getDoc, setDoc, addDoc, serverTimestamp } from 'firebase/firestore';
 

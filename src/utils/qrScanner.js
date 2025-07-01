@@ -1,3 +1,5 @@
+// No início de cada arquivo .jsx
+import React from 'react';
 // QR Code scanner utility using html5-qrcode
 import { Html5QrcodeScanner, Html5QrcodeScanType } from 'html5-qrcode';
 

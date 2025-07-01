@@ -1,3 +1,5 @@
+// No início de cada arquivo .jsx
+import React from 'react';
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
