@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Roteiro de Verificação – Operação de Caldeira</title>
+  <meta name="description" content="Sistema de roteiro de verificação para operação de caldeiras industriais com login por QR code e relatórios automatizados." />
+  <meta name="keywords" content="caldeira, inspeção, verificação, operação, industrial, QR code, relatório" />
+  <meta name="author" content="Anderson Alves" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Roteiro de Verificação – Operação de Caldeira" />
+  <meta property="og:description" content="Sistema de inspeção de caldeiras com login por QR code" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cdf-puma.web.app/" />
+  <meta property="og:image" content="/klabin.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Roteiro de Verificação – Operação" />
+  <meta name="twitter:description" content="Sistema de inspeção de caldeiras" />
+
+  <!-- Ícones -->
+  <link rel="icon" type="image/png" href="/klabin.png" />
+  <link rel="apple-touch-icon" href="/klabin.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- PWA -->
+  <meta name="theme-color" content="#059669" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Caldeira Check" />
+
+  <!-- Segurança -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  <script type="module" crossorigin src="/Caldeira-project/assets/index-ba9b2fed.js"></script>
+  <link rel="stylesheet" href="/Caldeira-project/assets/index-059f4a32.css">
+</head>
+<body>
+  <!-- Tela de carregamento -->
+  <div class="loading-screen">
+    <div class="text-center">
+      <div class="loading-spinner mx-auto mb-4"></div>
+      <p class="text-gray-600 font-medium">Carregando sistema...</p>
+    </div>
+  </div>
+
+  <!-- React render aqui -->
+  <div id="root"></div>
+
+  <!-- JS pós-load -->
+  <script>
+    // Remover tela de carregamento
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.body.classList.add('app-loaded');
+      }, 1000);
+    });
+
+    // Permissão de câmera
+    window.requestCameraPermission = async () => {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        stream.getTracks().forEach(track => track.stop());
+        return true;
+      } catch (error) {
+        console.error('Camera permission denied:', error);
+        return false;
+      }
+    };
+  </script>
+
+  <!-- Script da aplicação (ponto de entrada do Vite) -->
+  
+</body>
+</html>
